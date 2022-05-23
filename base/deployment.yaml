@@ -17,6 +17,8 @@ spec:
           image: arocontainerregistry.azurecr.io/mysql
           ports:
           - containerPort: 3306
+          imagePullSecrets:
+          - name: secret
           env:
             - name: MYSQL_USER
               valueFrom:
@@ -37,7 +39,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: mysql
-                  key: database-name          
+                  key: database-name     
 ---
 apiVersion : apps/v1
 kind: Deployment
@@ -60,4 +62,7 @@ spec:
           - containerPort: 8080
           envFrom:
             - configMapRef:
-                name: spring-petclinic          
+                name: spring-petclinic   
+          imagePullSecrets:
+          - name: secret
+
