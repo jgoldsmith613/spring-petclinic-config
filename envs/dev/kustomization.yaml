@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../base/
+images:
+- digest: sha256:f115098984d54ea36a96b4000000940309c3c18a16f967b45e34b579b00c6e82
+  name: arocontainerregistry.azurecr.io/spring-petclinic
+  newName: arocontainerregistry.azurecr.io/spring-petclinic

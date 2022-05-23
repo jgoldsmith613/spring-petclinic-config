@@ -1,0 +1,5 @@
+resources:
+- cm.yaml
+- deployment.yaml
+- service.yaml
+- secret.yaml
