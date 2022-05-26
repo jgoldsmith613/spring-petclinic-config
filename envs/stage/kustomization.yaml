@@ -5,4 +5,4 @@ resources:
 images:
 - name: arocontainerregistry.azurecr.io/spring-petclinic
   newName: arocontainerregistry.azurecr.io/spring-petclinic
-  newTag: "99"
+  newTag: "115"
